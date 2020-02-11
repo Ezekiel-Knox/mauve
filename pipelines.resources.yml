@@ -2,7 +2,7 @@ resources:
   - name: mauve
     type: GitRepo
     configuration:
-      gitProvider: Ezekiel-Knox
+      gitProvider: gitong
       path: Ezekiel-Knox/mauve     # Replace with your Git repo  
     branches:
         include: master
