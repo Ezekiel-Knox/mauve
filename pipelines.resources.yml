@@ -1,30 +1,15 @@
 resources:
-  # Git repo for back-end source
-  - name: be_gitRepo
+  - name: mauve
     type: GitRepo
     configuration:
-      path: sdemo/java-backend
-      gitProvider: sdemo_github
+      gitProvider: Ezekiel-Knox
+      path: Ezekiel-Knox/mauve     # Replace with your Git repo  
+    branches:
+        include: master
  
-  # Git repo for front-end source
-  - name: fe_gitRepo
-    type: GitRepo
-    configuration:
-      path: sdemo/vue-frontend
-      gitProvider: sdemo_github
- 
-  # Build info for the application
-  - name: appl_build_info
+  - name: build_info_1_docker_build_push
     type: BuildInfo
     configuration:
-      sourceArtifactory: myArtifactory
-      buildName: backend_build
-      buildNumber: 1
- 
-  # Build info for the promoted application
-  - name: appl_promoted_build_info
-    type: BuildInfo
-    configuration:
-      sourceArtifactory: myArtifactory
-      buildName: backend_build
+      sourceArtifactory: artimus
+      buildName: svc_build
       buildNumber: 1
