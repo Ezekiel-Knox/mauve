@@ -10,7 +10,7 @@ pipelines:
           dockerImageName: 'pipe-master.jfrog.info:8081/docker-local/alpine37'
           dockerImageTag: ${run_number}
           inputResources:
-            - name: myDockerRepo
+            - name: gitong
           integrations:
             - name: artimus
  
