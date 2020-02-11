@@ -1,5 +1,5 @@
 resources:
-  - name: mauve
+  - name: myDockerRepo
     type: GitRepo
     configuration:
       gitProvider: gitong
