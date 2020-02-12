@@ -7,7 +7,7 @@ pipelines:
           affinityGroup: dockerGroup
           dockerFileLocation: .
           dockerFileName: Dockerfile
-          dockerImageName: 'docker-local.art.local/alpine37'
+          dockerImageName: 'docker.art.local/alpine37'
           dockerImageTag: ${run_number}
           inputResources:
             - name: myDockerRepo
