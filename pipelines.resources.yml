@@ -2,7 +2,7 @@ resources:
   - name: myDockerRepo
     type: GitRepo
     configuration:
-      gitProvider: gitong
+      gitProvider: gitto
       path: Ezekiel-Knox/mauve     # Replace with your Git repo  
     branches:
         include: master
