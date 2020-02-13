@@ -1,15 +1,6 @@
 resources:
-  - name: myDockerRepo
+  - name: myAppRepo
     type: GitRepo
     configuration:
       gitProvider: gitto
-      path: Ezekiel-Knox/mauve     # Replace with your Git repo  
-    branches:
-        include: master
- 
-  - name: build_info_1_docker_build_push
-    type: BuildInfo
-    configuration:
-      sourceArtifactory: artimus
-      buildName: svc_build
-      buildNumber: 1
+      path: Ezekiel-Knox/mauve
