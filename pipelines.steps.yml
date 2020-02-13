@@ -1,33 +1,16 @@
 pipelines:
-  - name: pipeline_docker_build_push
+  - name: pipeline_hello_world
+    configuration:
+      environmentVariables:
+        readOnly:
+          MY_MESSAGE: '"Hello World!"'
     steps:
-      - name: docker_build
-        type: DockerBuild
+      - name: step_1
+        type: Bash
         configuration:
-          affinityGroup: dockerGroup
-          dockerFileLocation: .
-          dockerFileName: Dockerfile
-          dockerImageName: 'docker.art.local/alpine37'
-          dockerImageTag: ${run_number}
           inputResources:
-            - name: myDockerRepo
-          integrations:
-            - name: artimus
- 
-      - name: docker_push
-        type: DockerPush
-        configuration:
-          affinityGroup: dockerGroup
-          targetRepository: docker-local
-          integrations:
-            - name: artimus
-          inputSteps:
-            - name: docker_build
- 
-      - name: publish_build_info
-        type: PublishBuildInfo
-        configuration:
-          inputSteps:
-            - name: docker_push
-          outputResources:
-            - name: build_info_1_docker_build_push
+            - name: myAppRepo
+        execution:
+          onExecute:
+            - echo $MY_MESSAGE
+            - echo “running CI for master”
